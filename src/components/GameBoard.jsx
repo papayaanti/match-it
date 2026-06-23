@@ -206,26 +206,28 @@ function GameBoard({ difficulty, tileMode, onWin, onLose }) {
 
 
   return (
-    <div className="game-board">
-      <img src={backgroundImage} className='bg'/>
-      <div className="game-board__header">
-        <h1 className="game-board__title">Match it!</h1>
-        <div className="game-board__stats">
-          <p>mode: {difficulty}</p>
-          <p>lives: {lives}</p>
-        </div>
-      </div>
+      <div className="game-board">
+        <img src={backgroundImage} className='bg'/>
+        <div className='oops'>
+          <div className="game-board__header">
+            <h1 className="game-board__title">Match it!</h1>
+            <div className="game-board__stats">
+              <p>mode: {difficulty}</p>
+              <p>lives: {lives}</p>
+            </div>
+          </div>
 
-      <div className="game-board__grid">
-        {rows.map((row, i) => (
-          <div key={i} className="game-board__row">
-            {row.map(card => (
-              <Card key={card.id} card={card} onClick={handleCardClick} />
+          <div className="game-board__grid">
+            {rows.map((row, i) => (
+              <div key={i} className="game-board__row">
+                {row.map(card => (
+                  <Card key={card.id} card={card} onClick={handleCardClick} />
+                ))}
+              </div>
             ))}
           </div>
-        ))}
+        </div>
       </div>
-    </div>
   );
 }
 

@@ -4,20 +4,27 @@
   border: none;
 }
 
-.bg{
-  width: 100%;
-  z-index: 0;
-  position: absolute;
-  pointer-events: none;
+.bg {
+  position: fixed;
   bottom: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .oops {
   transform: scale(0.5);
   transform-origin: top center;
-  width: 200%;
-  height: 200%;
+  width: 100vw;
+  height: 200vh;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  z-index: 1;
 }
 
 

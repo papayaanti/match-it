@@ -29,59 +29,58 @@ function GameMenu({ onStartGame }) {
   }
 
   return (
-    <div className='oops'>
       <div className="game-menu">
         <img src='/match-it/bg1.png' className='bg'/>
+          <div className='oops'>
+            <h1 className="game-menu__title">Match it!</h1>
 
-          <h1 className="game-menu__title">Match it!</h1>
+            <div className="game-menu__panel">
+              <p className="game-menu__section-label">choose your game mode:</p>
 
-          <div className="game-menu__panel">
-            <p className="game-menu__section-label">choose your game mode:</p>
-
-            <div className="game-menu__btn-row">
-              <button
-                onClick={() => setSelectedTileMode('potions')}
-                className={getTileModeClass('potions')}
-              >
-                <img src={'/match-it/redpotion.png'} alt=""/>
-                potions
-              </button>
-
-              <button
-                onClick={() => setSelectedTileMode('gems')}
-                className={getTileModeClass('gems')}
-              >
-                <img src={'/match-it/bluegem.png'} alt="" />
-                gems
-              </button>
-            </div>
-
-            <p className="game-menu__section-label mt-2pt5">choose your difficulty:</p>
-
-            <div className="game-menu__btn-row">
-              {['easy', 'medium', 'hard'].map((level) => (
+              <div className="game-menu__btn-row">
                 <button
-                  key={level}
-                  onClick={() => setSelectedDifficulty(level)}
-                  className={getDifficultyClass(level)}
+                  onClick={() => setSelectedTileMode('potions')}
+                  className={getTileModeClass('potions')}
                 >
-                  {level}
+                  <img src={'/match-it/redpotion.png'} alt=""/>
+                  potions
                 </button>
-              ))}
-            </div>
 
-            <p className="game-menu__description">
-              {difficultyDescriptions[selectedDifficulty]}
-            </p>
-            <div className='forbuttonlol'>
-              <button onClick={() => onStartGame(selectedDifficulty, selectedTileMode)} className="game-menu__btn">
-              <img src={'/match-it/star.png'} alt=""/>
-              start game
-              </button>
+                <button
+                  onClick={() => setSelectedTileMode('gems')}
+                  className={getTileModeClass('gems')}
+                >
+                  <img src={'/match-it/bluegem.png'} alt="" />
+                  gems
+                </button>
+              </div>
+
+              <p className="game-menu__section-label mt-2pt5">choose your difficulty:</p>
+
+              <div className="game-menu__btn-row">
+                {['easy', 'medium', 'hard'].map((level) => (
+                  <button
+                    key={level}
+                    onClick={() => setSelectedDifficulty(level)}
+                    className={getDifficultyClass(level)}
+                  >
+                    {level}
+                  </button>
+                ))}
+              </div>
+
+              <p className="game-menu__description">
+                {difficultyDescriptions[selectedDifficulty]}
+              </p>
+              <div className='forbuttonlol'>
+                <button onClick={() => onStartGame(selectedDifficulty, selectedTileMode)} className="game-menu__btn">
+                <img src={'/match-it/star.png'} alt=""/>
+                start game
+                </button>
+              </div>
             </div>
           </div>
         </div>
-    </div>
   );
 }
 
