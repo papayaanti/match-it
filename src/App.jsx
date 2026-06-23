@@ -22,7 +22,6 @@ function App() {
   const handleNewGame = () => setGameState('menu');
 
   return (
-    <div className='oops'>
       <div className="app-root">
         <PixelBackground />
         {gameState === 'menu' && (
@@ -43,7 +42,6 @@ function App() {
           />
         )}
       </div>
-    </div>
   );
 }
 
