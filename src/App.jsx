@@ -22,25 +22,27 @@ function App() {
   const handleNewGame = () => setGameState('menu');
 
   return (
-    <div className="app-root">
-      <PixelBackground />
-      {gameState === 'menu' && (
-        <GameMenu onStartGame={handleStartGame} />
-      )}
-      {gameState === 'playing' && (
-        <GameBoard
-          difficulty={difficulty}
-          tileMode={tileMode}
-          onWin={handleGameWin}
-          onLose={handleGameLose}
-        />
-      )}
-      {(gameState === 'win' || gameState === 'lose') && (
-        <GameOver
-          isWin={gameState === 'win'}
-          onNewGame={handleNewGame}
-        />
-      )}
+    <div className='oops'>
+      <div className="app-root">
+        <PixelBackground />
+        {gameState === 'menu' && (
+          <GameMenu onStartGame={handleStartGame} />
+        )}
+        {gameState === 'playing' && (
+          <GameBoard
+            difficulty={difficulty}
+            tileMode={tileMode}
+            onWin={handleGameWin}
+            onLose={handleGameLose}
+          />
+        )}
+        {(gameState === 'win' || gameState === 'lose') && (
+          <GameOver
+            isWin={gameState === 'win'}
+            onNewGame={handleNewGame}
+          />
+        )}
+      </div>
     </div>
   );
 }

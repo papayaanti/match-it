@@ -12,4 +12,12 @@
   bottom: 0;
 }
 
+.oops {
+  transform: scale(0.5);
+  transform-origin: top center;
+  width: 200%;
+  height: 200%;
+  margin: 0 auto;
+}
+
 
