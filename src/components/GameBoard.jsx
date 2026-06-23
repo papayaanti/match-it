@@ -4,19 +4,19 @@ import './GameBoard.css';
 import '../App.css';
 
 const potionCardTypes = [
-  { type: 'red-potion', imageUrl: '/redpotion.png' },
-  { type: 'black-potion', imageUrl: '/blackpotion.png' },
-  { type: 'green-potion', imageUrl: '/greenpotion.png' },
-  { type: 'orange-potion', imageUrl: '/orangepotion.png' },
-  { type: 'purple-potion', imageUrl: '/purplepotion.png' },
+  { type: 'red-potion', imageUrl: '/match-it/redpotion.png' },
+  { type: 'black-potion', imageUrl: '/match-it/blackpotion.png' },
+  { type: 'green-potion', imageUrl: '/match-it/greenpotion.png' },
+  { type: 'orange-potion', imageUrl: '/match-it/orangepotion.png' },
+  { type: 'purple-potion', imageUrl: '/match-it/purplepotion.png' },
 ];
 
 const gemCardTypes = [
-  { type: 'red-gem', imageUrl: '/redgem.png' },
-  { type: 'blue-gem', imageUrl: '/bluegem.png' },
-  { type: 'purple-gem', imageUrl: '/purplegem.png' },
-  { type: 'green-gem', imageUrl: '/greengem.png' },
-  { type: 'yellow-gem', imageUrl: '/yellowgem.png' },
+  { type: 'red-gem', imageUrl: '/match-it/redgem.png' },
+  { type: 'blue-gem', imageUrl: '/match-it/bluegem.png' },
+  { type: 'purple-gem', imageUrl: '/match-it/purplegem.png' },
+  { type: 'green-gem', imageUrl: '/match-it/greengem.png' },
+  { type: 'yellow-gem', imageUrl: '/match-it/yellowgem.png' },
 ];
 
 const DIFFICULTY = {
@@ -71,8 +71,8 @@ function GameBoard({ difficulty, tileMode, onWin, onLose }) {
 
     if (config.specials) {
       pairs.push(
-        { id: id++, type: 'lightning', imageUrl: '/thunder.png', isFlipped: false, isMatched: false },
-        { id: id++, type: 'lightning', imageUrl: '/thunder.png', isFlipped: false, isMatched: false },
+        { id: id++, type: 'lightning', imageUrl: '/match-it/thunder.png', isFlipped: false, isMatched: false },
+        { id: id++, type: 'lightning', imageUrl: '/match-it/thunder.png', isFlipped: false, isMatched: false },
         { id: id++, type: 'bonus-life', imageUrl: '', isFlipped: false, isMatched: false }
       );
     }
@@ -197,9 +197,9 @@ function GameBoard({ difficulty, tileMode, onWin, onLose }) {
   const rows = buildRows(cards, config.pattern);
 
   const backgrounds = {
-  easy: "/bg4.png",
-  medium: "/bg2.png",
-  hard: "/bg3.png"
+  easy: "/match-it/bg4.png",
+  medium: "/match-it/bg2.png",
+  hard: "/match-it/bg3.png"
   };
 
   const backgroundImage = backgrounds[difficulty];

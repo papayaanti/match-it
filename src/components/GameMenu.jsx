@@ -30,7 +30,7 @@ function GameMenu({ onStartGame }) {
 
   return (
     <div className="game-menu">
-      <img src='/bg1.png' className='bg'/>
+      <img src='/match-it/bg1.png' className='bg'/>
 
         <h1 className="game-menu__title">Match it!</h1>
 

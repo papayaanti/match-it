@@ -12,7 +12,7 @@ function GameOver({ isWin, onNewGame }) {
 
   return (
     <div className="game-over">
-      <img src="/bg1.png" className="bg" />
+      <img src="/match-it/bg1.png" className="bg" />
 
       <div className="game-over__content">
         <div className="game-over__graphic">
