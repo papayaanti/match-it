@@ -1,0 +1,63 @@
+.game-over {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-over__content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-over__graphic {
+  width: 217px;
+  height: 217px;
+  margin-bottom: 2rem;
+}
+
+.game-over__graphic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-bottom: 0;
+}
+
+h1 {
+  font-family: 'Jersey 10', sans-serif;
+  font-size: 200px;
+  line-height: 1;
+  color: #ffffff;
+  margin-bottom: 3rem;
+  margin-top: 0;
+}
+
+.game-over__btn {
+  width: fit-content;
+  border: 2px solid #ffffff;
+  border-radius: 33px;
+  height: 66px;
+  font-family: 'Jersey 10', sans-serif;
+  font-size: 40px;
+  color: #ffffff;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 40px;
+  gap: 0.75rem;
+  transition: background, color, scale 0.3s ease;
+  text-wrap: nowrap;
+}
+
+.game-over__btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  scale: 1.1;
+}
+

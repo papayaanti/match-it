@@ -1,0 +1,15 @@
+.app-root {
+  min-height: 100vh;
+  position: relative;
+  border: none;
+}
+
+.bg{
+  width: 100%;
+  z-index: 0;
+  position: absolute;
+  pointer-events: none;
+  bottom: 0;
+}
+
+
