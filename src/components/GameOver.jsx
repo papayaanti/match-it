@@ -3,11 +3,11 @@ import '../App.css';
 
 function GameOver({ isWin, onNewGame }) {
   let title = "You lose!";
-  let graphic = "/lose.png";
+  let graphic = "/match-it/lose.png";
 
   if (isWin) {
     title = "You win!";
-    graphic = "/star.png";
+    graphic = "/match-it/star.png";
   }
 
   return (

@@ -36,7 +36,7 @@ function Card(props) {
   } else {
     content = (
       <div className="card-back">
-        <img src="/question.png"/>
+        <img src="/match-it/question.png"/>
       </div>
     );
   }

@@ -42,7 +42,7 @@ function GameMenu({ onStartGame }) {
               onClick={() => setSelectedTileMode('potions')}
               className={getTileModeClass('potions')}
             >
-              <img src={'/redpotion.png'} alt=""/>
+              <img src={'/match-it/redpotion.png'} alt=""/>
               potions
             </button>
 
@@ -50,7 +50,7 @@ function GameMenu({ onStartGame }) {
               onClick={() => setSelectedTileMode('gems')}
               className={getTileModeClass('gems')}
             >
-              <img src={'/bluegem.png'} alt="" />
+              <img src={'/match-it/bluegem.png'} alt="" />
               gems
             </button>
           </div>
@@ -74,7 +74,7 @@ function GameMenu({ onStartGame }) {
           </p>
           <div className='forbuttonlol'>
             <button onClick={() => onStartGame(selectedDifficulty, selectedTileMode)} className="game-menu__btn">
-            <img src={'/star.png'} alt=""/>
+            <img src={'/match-it/star.png'} alt=""/>
             start game
             </button>
           </div>
